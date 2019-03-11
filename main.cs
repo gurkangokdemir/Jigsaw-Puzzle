@@ -339,6 +339,92 @@ bttnImg44 = ImageArrayMixed[15];
         private void buttonMixer_Click(object sender, EventArgs e)
         {
 
+            Random r = new Random();
+            int z = r.Next();
+            z = z % 100;
+            for (int i = 0; i < z; i++)
+            {
+
+
+            int x1=0, y1=0;
+            int x2 = 0, y2=0;
+
+
+            x1 = r.Next();
+            y1 = r.Next();
+             
+            x1 = x1 % 4;
+            y1 = y1 % 4;
+
+            x2 = r.Next();
+            y2 = r.Next();
+             
+            x2 = x2 % 4;
+            y2 = y2 % 4;
+
+            clickedFirst = (x1 + 1) * 10 + (y1 + 1);
+            clickedSecond = (x2 + 1) * 10 + (y2 + 1);
+
+            //MessageBox.Show(clickedFirst + " " + clickedSecond);
+
+            switch (clickedSecond)
+            {
+                case 11:
+                    imgBttn11.PerformClick();
+                    break;
+                case 12:
+                    imgBttn12.PerformClick();
+                    break;
+
+                case 13:
+                    imgBttn13.PerformClick();
+                    break;
+                case 14:
+                    imgBttn14.PerformClick();
+                    break;
+                case 21:
+                    imgBttn21.PerformClick();
+                    break;
+                case 22:
+                    imgBttn22.PerformClick();
+                    break;
+                case 23:
+                    imgBttn23.PerformClick();
+                    break;
+                case 24:
+                    imgBttn24.PerformClick();
+                    break;
+                case 31:
+                    imgBttn31.PerformClick();
+                    break;
+                case 32:
+                    imgBttn32.PerformClick();
+                    break;
+                case 33:
+                    imgBttn33.PerformClick();
+                    break;
+                case 34:
+                    imgBttn34.PerformClick();
+                    break;
+                case 41:
+                    imgBttn41.PerformClick();
+                    break;
+                case 42:
+                    imgBttn42.PerformClick();
+                    break;
+                case 43:
+
+                    imgBttn43.PerformClick();
+                    break;
+                case 44:
+                    imgBttn44.PerformClick();
+                    break;
+                default:
+                    break;
+            }
+            ImageSetter();
+            }
+
         }
 
 
