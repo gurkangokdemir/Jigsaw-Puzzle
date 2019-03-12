@@ -52,6 +52,7 @@ namespace ImageProcessor
         Image bttnImg44Org;
 
 
+        double totalPoint = 0;
         Boolean cheatButton = false;
         int clickedFirst = 0;
         int clickedSecond = 0;
@@ -70,6 +71,88 @@ namespace ImageProcessor
 
         enum Buttons {
 
+
+
+        }
+
+        public void PointChecker() {
+            if (totalPoint == 100)
+            {
+                MessageBox.Show("Congratulations! You've finished the puzzle!");
+            }
+        }
+
+        public void ImageChecker() {
+
+            totalPoint = 0;
+
+            if (bttnImg11 == bttnImg11Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg12 == bttnImg12Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg13 == bttnImg13Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg14 == bttnImg14Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg21 == bttnImg21Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg22 == bttnImg22Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg23 == bttnImg23Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg24 == bttnImg24Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg31 == bttnImg31Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg32 == bttnImg32Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg33 == bttnImg33Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg34 == bttnImg34Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg41 == bttnImg41Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg42 == bttnImg42Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg43 == bttnImg43Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+            if (bttnImg44 == bttnImg44Org)
+            {
+                totalPoint = totalPoint + 6.25;
+            }
+
+            PointChecker();
+            
 
 
         }
@@ -96,6 +179,8 @@ namespace ImageProcessor
             imgBttn24.BackgroundImage = bttnImg24;
             imgBttn34.BackgroundImage = bttnImg34;
             imgBttn44.BackgroundImage = bttnImg44;
+
+            ImageChecker();
 
 
         }
@@ -294,7 +379,6 @@ bttnImg44 = ImageArrayMixed[15];
         private void buttonCheat_Click(object sender, EventArgs e)
         {
 
-
             pictureBoxOriginalImage.Show();
 
             imgBttn11.Hide();
@@ -413,7 +497,6 @@ bttnImg44 = ImageArrayMixed[15];
                     imgBttn42.PerformClick();
                     break;
                 case 43:
-
                     imgBttn43.PerformClick();
                     break;
                 case 44:
@@ -485,6 +568,7 @@ bttnImg44 = ImageArrayMixed[15];
 
                 cheatButton = true;
             }
+            PointChecker();
  
         }
 
