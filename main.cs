@@ -213,6 +213,7 @@ namespace ImageProcessor
 
         private void buttonOpen_Click(object sender, EventArgs e)
         {
+
             pictureBoxNewImage.Hide();
             DialogResult dialogResult = openFileDialogImage.ShowDialog();
             
@@ -221,7 +222,6 @@ namespace ImageProcessor
             {
                 imageBitmap = new Bitmap(openFileDialogImage.FileName);
                 imageFile = ResizeImage(Image.FromFile(openFileDialogImage.FileName), imgHeight,imgWidth);
-                Program.ImageSlicer(imageFile);
                 pictureBoxOriginalImage.Image = imageFile;
                 isFileOpened = true;
                 pictureBoxOriginalImage.Hide();
